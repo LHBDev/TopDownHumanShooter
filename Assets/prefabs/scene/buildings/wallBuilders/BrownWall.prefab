@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1353037297804728}
+  m_IsPrefabParent: 1
+--- !u!1 &1353037297804728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4210176673431342}
+  - component: {fileID: 114681783032858730}
+  m_Layer: 0
+  m_Name: BrownWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4210176673431342
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353037297804728}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114681783032858730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353037297804728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692529e0476164f5f9297fa4d04466cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallLayers:
+  - layerEdge: 0.516
+    material: {fileID: 2100000, guid: 394db158e504042dcab792a243f57af3, type: 2}
+  - layerEdge: 0.677
+    material: {fileID: 2100000, guid: 644c1405f4c974feaa6bb69439fa9d31, type: 2}
+  - layerEdge: 0.935
+    material: {fileID: 2100000, guid: 4e9a081b1f87e42b69bdda4944d90e76, type: 2}
+  - layerEdge: 1
+    material: {fileID: 2100000, guid: 3cdc4447129964e0ab3607d1a6a92d37, type: 2}
+  wallThickness: 0.5
+  snapDistance: 0.5
+  colliderHeight: 2
+  transparentMaterial: {fileID: 2100000, guid: a86e7e8fe9b0647f081d068fff83c3b7, type: 2}
+  points: []
+  edges: []
