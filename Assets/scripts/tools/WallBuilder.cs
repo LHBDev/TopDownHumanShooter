@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [System.Serializable]
 public struct Edge {
@@ -397,8 +399,10 @@ public class WallBuilder : MonoBehaviour {
 			colliderGO.GetComponent<MeshCollider>().sharedMesh = mesh;
 			colliderGO.GetComponent<MeshFilter>().sharedMesh = mesh;
 			colliderGO.GetComponent<MeshRenderer>().material = transparentMaterial;
+			#if UNITY_EDITOR
 			GameObjectUtility.SetStaticEditorFlags(colliderGO, StaticEditorFlags.NavigationStatic);
 			GameObjectUtility.SetNavMeshArea(colliderGO, GameObjectUtility.GetNavMeshAreaFromName("Not Walkable"));
+			#endif
 		}
 		Mesh sharedMesh = colliderTransform.GetComponent<MeshCollider>().sharedMesh;
 		sharedMesh.Clear();

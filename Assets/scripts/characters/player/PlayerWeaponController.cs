@@ -4,41 +4,30 @@ using System.Collections.Generic;
 
 public class PlayerWeaponController : MonoBehaviour {
 
-	[SerializeField]
-	private List<Weapon> weapons; //must always have atleast one weapon!
-	private int currentWeaponIndex = 0;
-	private Weapon currentWeapon;
+	public GameObject defaultWeaponPrefab;
+	public Vector3 weaponPosition;
+	public Vector3 weaponRotation;
 
-	void Start() {
-		currentWeapon = weapons[currentWeaponIndex];
+	private GameObject weaponInstance;
+	private WeaponController weaponController;
+
+	public void Start() {
+		SetWeapon(defaultWeaponPrefab);
 	}
 
-	void Update() {
-		if(Input.GetButtonDown("NextWeapon")) NextWeapon();
-		if(Input.GetButtonDown("PreviousWeapon")) PreviousWeapon();
+	public void Update() {
 		if(Input.GetButton("Fire1")) Fire();
 	}
 
-	public void AddWeapon(Weapon newWeapon) {
-		weapons.Add(newWeapon);
+	public void SetWeapon(GameObject weaponPrefab) {
+		Destroy(weaponInstance);
+		weaponInstance = Instantiate(weaponPrefab, transform);
+		weaponInstance.transform.localPosition = weaponPosition;
+		weaponInstance.transform.localRotation = Quaternion.Euler(weaponRotation);
+		weaponController = weaponInstance.GetComponent<WeaponController>();
 	}
 
 	private void Fire() {
-		currentWeapon.Fire(transform);
-	}
-
-	private void NextWeapon() {
-		SetCurrentWeapon(currentWeaponIndex + 1);
-	}
-
-	private void PreviousWeapon() {
-		SetCurrentWeapon(currentWeaponIndex - 1);
-	}
-
-	private void SetCurrentWeapon(int weaponIndex) {
-		if(weaponIndex >= weapons.Count) weaponIndex = 0;
-		else if(weaponIndex < 0) weaponIndex = weapons.Count - 1;
-		currentWeapon = weapons[weaponIndex];
-		currentWeaponIndex = weaponIndex;
+		weaponController.Fire();
 	}
 }

@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244407145490256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.73, y: 0.25, z: -8.72}
+  m_LocalPosition: {x: 0.73, y: 0.25, z: -4.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4655277010663548}
@@ -108,10 +108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348327506ffc1443987dfb065f9a509a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - fireRate: 8
-    projectilePrefab: {fileID: 191144, guid: 44a76aa22fd4f4a89b1df045eda684eb, type: 2}
-    muzzlePosition: {x: 0, y: 0, z: 0}
+  defaultWeaponPrefab: {fileID: 1814371214833584, guid: d430ea56e10544e55bfab22a5eb0c917,
+    type: 2}
+  weaponPosition: {x: 0.2, y: 0.1, z: 0.3}
+  weaponRotation: {x: 90, y: 0, z: 90}
 --- !u!195 &195736551141647756
 NavMeshAgent:
   m_ObjectHideFlags: 1

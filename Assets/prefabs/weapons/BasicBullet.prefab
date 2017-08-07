@@ -154,8 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletObject: {fileID: 138474}
   trailObject: {fileID: 135128}
-  length: 3
-  bulletPortion: 0.8
+  length: 5
+  bulletPortion: 0.2
 --- !u!114 &11481474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 15
-  speed: 30
+  speed: 40
   range: 150
   destroyOnImpact: 0
   stopOnImpact: 1
@@ -210,7 +210,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.5
+    widthMultiplier: 0.75
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -231,8 +231,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.9254902, b: 0.31764707, a: 1}
-      key1: {r: 1, g: 0.9019608, b: 0.5803922, a: 0.60784316}
+      key0: {r: 0.9705882, g: 0.7201893, b: 0.17841695, a: 1}
+      key1: {r: 0.9705882, g: 0.7201893, b: 0.17841695, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -255,7 +255,7 @@ LineRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 0
+      m_Mode: 1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -323,8 +323,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.87058824, b: 0.32941177, a: 0.99607843}
-      key1: {r: 1, g: 0.99607843, b: 0.9490196, a: 0.24705882}
+      key0: {r: 0.8088235, g: 0.44230634, b: 0.16057527, a: 0.99607843}
+      key1: {r: 1, g: 0.99607843, b: 0.9490196, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
