@@ -29,5 +29,6 @@ public class PlayerWeaponController : MonoBehaviour {
 
 	private void Fire() {
 		weaponController.Fire();
+		if(weaponController.GetBulletCount() <= 0) SetWeapon(defaultWeaponPrefab);
 	}
 }

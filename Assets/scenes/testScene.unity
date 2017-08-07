@@ -1921,48 +1921,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02e528f83066348dbaf84664412d7074, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &775163257
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.921
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -4.628
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4806360524667686, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-      propertyPath: m_RootOrder
-      value: 45
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d430ea56e10544e55bfab22a5eb0c917, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &777255048
 Prefab:
   m_ObjectHideFlags: 0
@@ -5356,37 +5314,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114869766818042232, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3,
-        type: 2}
-      propertyPath: defaultWeaponPrefab
-      value: 
-      objectReference: {fileID: 1814371214833584, guid: d430ea56e10544e55bfab22a5eb0c917,
-        type: 2}
-    - target: {fileID: 114869766818042232, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3,
-        type: 2}
-      propertyPath: weaponPosition.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114869766818042232, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3,
-        type: 2}
-      propertyPath: weaponPosition.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114869766818042232, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3,
-        type: 2}
-      propertyPath: weaponPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114869766818042232, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3,
-        type: 2}
-      propertyPath: weaponRotation.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114869766818042232, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3,
-        type: 2}
-      propertyPath: weaponRotation.x
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb03b78a3d0a04d8cb3dd59bf83f67a3, type: 2}
   m_IsPrefabParent: 0
@@ -6458,6 +6385,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1936274806}
   - component: {fileID: 1936274805}
+  - component: {fileID: 1936274807}
+  - component: {fileID: 1936274808}
   m_Layer: 0
   m_Name: machineGunPowerUp
   m_TagString: Untagged
@@ -6520,6 +6449,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &1936274807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936274804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0.12}
+--- !u!114 &1936274808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936274804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb67090586fe840c68fbe272f84f0374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 1767917661401266, guid: 123734957f03f430184214843b188e99,
+    type: 2}
 --- !u!1 &1942468967
 GameObject:
   m_ObjectHideFlags: 0
