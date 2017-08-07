@@ -31,6 +31,10 @@ public class Health : MonoBehaviour {
 		return health;
 	}
 
+	public bool IsFull() {
+		return health == maxHealth;
+	}
+
 	private void Die() {
 		if(dead) return;
 		dead = true;
