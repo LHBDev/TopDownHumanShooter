@@ -11,9 +11,11 @@ public class WeaponController : MonoBehaviour {
 
 	private float lastShotTime;
 	private int bulletCount;
+	private AudioSource audioSource;
 
 	public void Start() {
 		bulletCount = initBulletCount;
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	public bool Fire() {
@@ -22,6 +24,7 @@ public class WeaponController : MonoBehaviour {
 				SimplePool.Spawn(projectilePrefab, transform.TransformPoint(muzzlePosition), Quaternion.LookRotation(transform.right));
 			lastShotTime = Time.time;
 			bulletCount--;
+			if(audioSource != null) audioSource.Play();
 			return true;
 		}
 		return false;
